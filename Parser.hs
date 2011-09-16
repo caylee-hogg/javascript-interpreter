@@ -50,4 +50,5 @@ varStatement = commaSep1 aux
          r <- option Nothing $ expr >>= return . Just
          return (v,r)
          
+-- need to use an expression parser here, built from the parsec machinery
 expr = undefined

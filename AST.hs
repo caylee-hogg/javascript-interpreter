@@ -24,10 +24,13 @@ data Disrupter = Break (Maybe String)
 
 data Exp = NumLit Double
          | StrLit String
+         | ObjLit [(String,Exp)]
          | Var String
          | Unop Unop Exp
          | Binop Exp Binop Exp
-         | New Exp Inv
+         | Refine Exp Refine
+         | Application Exp [Exp]
+         | New Exp [Exp]
          | Delete Exp Refine
 
 data Unop = TypeOf
@@ -36,5 +39,3 @@ data Unop = TypeOf
           | Not
             
 data Binop = Times | Div | Mod | Add | Sub | GEq | LEq | GE | LE | Eq | Or | And
-
-type Inv = ()
