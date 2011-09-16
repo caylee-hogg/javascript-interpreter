@@ -35,4 +35,6 @@ data Unop = TypeOf
           | Negate
           | Not
             
-data Infix = Times | Div | Mod | Add | Sub | GEq | LEq | GE | LE | Eq | Or | And
+data Binop = Times | Div | Mod | Add | Sub | GEq | LEq | GE | LE | Eq | Or | And
+
+type Inv = ()
